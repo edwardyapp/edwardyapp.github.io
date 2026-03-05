@@ -64,9 +64,9 @@
     #hero {
       padding-top: 130px;
       display: grid;
-      grid-template-columns: 1fr auto;
+      grid-template-columns: auto 1fr;
       gap: 3rem;
-      align-items: start;
+      align-items: center;
     }
     .hero-eyebrow {
       font-size: 0.75rem;
@@ -113,10 +113,10 @@
     .btn-outline:hover { border-color: var(--ink); color: var(--ink); }
 
     .avatar-wrap {
-      width: 140px; height: 140px;
-      border-radius: 50%;
+      width: 220px; height: 330px;
+      border-radius: 2px;
       overflow: hidden;
-      border: 3px solid var(--rule);
+      border: 1px solid var(--rule);
       flex-shrink: 0;
     }
     .avatar-placeholder {
@@ -203,7 +203,7 @@
     .teaching-list { display: flex; flex-direction: column; gap: 1rem; }
     .course-item {
       display: grid;
-      grid-template-columns: 1fr auto;
+      grid-template-columns: auto 1fr;
       align-items: center;
       padding: 1.1rem 1.4rem;
       border: 1px solid var(--rule);
@@ -256,7 +256,7 @@
 
     @media (max-width: 600px) {
       #hero { grid-template-columns: 1fr; }
-      .avatar-wrap { width: 90px; height: 90px; order: -1; }
+      .avatar-wrap { width: 100%; height: 220px; order: -1; }
       .nav-links { display: none; }
     }
   </style>
@@ -276,6 +276,9 @@
 <main>
 
   <section id="hero">
+    <div class="avatar-wrap">
+      <img src="IMG_2150.WEBP" alt="Edward Yapp Kien Yee" style="width:100%;height:100%;object-fit:cover;object-position:center center;">
+    </div>
     <div>
       <p class="hero-eyebrow">Senior Lecturer · Singapore University of Social Sciences</p>
       <h1>Edward Yapp Kien Yee</h1>
@@ -285,12 +288,8 @@
       </p>
       <div class="hero-links">
         <a href="#publications" class="btn btn-primary">View Publications</a>
-        <a href="/cdn-cgi/l/email-protection#fd98998a9c8f99849c8d8d9684bd8e888e8ed3989988d38e9a" class="btn btn-outline">Get in Touch</a>
+        <a href="/cdn-cgi/l/email-protection#335657445241574a524343584a73404640401d5657461d4054" class="btn btn-outline">Get in Touch</a>
       </div>
-    </div>
-    <div class="avatar-wrap">
-      <!-- To add your photo: replace the div below with <img src="photo.jpg" alt="Edward Yapp Kien Yee"> -->
-      <div class="avatar-placeholder">EY</div>
     </div>
   </section>
 
@@ -400,4 +399,4 @@
   </p>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><scri
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudf
