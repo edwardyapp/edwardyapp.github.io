@@ -51,6 +51,23 @@
     .avatar-wrap { width: 200px; height: 280px; overflow: hidden; border: 1px solid var(--rule); border-radius: 2px; flex-shrink: 0; }
     .avatar-wrap img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
 
+   /* EDUCATION TIMELINE */
+    .edu-timeline-inner { position: relative; padding-left: 1.4rem; }
+    .edu-timeline-inner::before {
+      content: ''; position: absolute; left: 0; top: 0.35rem; bottom: 0.35rem;
+      width: 2px; background: var(--rule);
+    }
+    .edu-entry { position: relative; margin-bottom: 1.1rem; padding-left: 1rem; }
+    .edu-entry:last-child { margin-bottom: 0; }
+    .edu-entry::before {
+      content: ''; position: absolute; left: -1.45rem; top: 0.48rem;
+      width: 7px; height: 7px; border-radius: 50%;
+      background: var(--bg); border: 2px solid var(--accent);
+    }
+    .edu-degree { font-family: var(--serif); font-size: 1rem; font-weight: 500; line-height: 1.35; }
+    .edu-inst { font-size: 0.82rem; color: var(--accent); margin-top: 0.1rem; }
+    .edu-meta { font-size: 0.78rem; color: var(--muted); }
+
     /* RESEARCH */
     .interests-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1px; border: 1px solid var(--rule); background: var(--rule); }
     .interest-card { background: var(--bg); padding: 1.4rem 1.5rem; }
@@ -130,6 +147,7 @@
 <nav>
   <a class="nav-name" href="#hero">Edward Yapp Kien Yee</a>
   <ul class="nav-links">
+    <li><a href="#education">Education</a></li>
     <li><a href="#research">Research</a></li>
     <li><a href="#publications">Publications</a></li>
     <li><a href="#teaching">Teaching</a></li>
@@ -152,6 +170,28 @@
       <div class="hero-links">
         <a href="#publications" class="btn btn-primary">View Publications</a>
         <a href="/cdn-cgi/l/email-protection#89ecedfee8fbedf0e8f9f9e2f0c9fafcfafaa7ecedfca7faee" class="btn btn-outline">Get in Touch</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education">
+    <span class="section-label">Education</span>
+    <div class="edu-timeline-inner">
+      <div class="edu-entry">
+        <p class="edu-degree">Doctor of Philosophy, Chemical Engineering</p>
+        <p class="edu-inst">University of Cambridge</p>
+        <p class="edu-meta">Cambridge, UK · 2016</p>
+      </div>
+      <div class="edu-entry">
+        <p class="edu-degree">Bachelor of Chemical Engineering (1st Class Honours)</p>
+        <p class="edu-inst">The University of Adelaide</p>
+        <p class="edu-meta">Adelaide, Australia · 2010</p>
+      </div>
+      <div class="edu-entry">
+        <p class="edu-degree">Bachelor of Finance</p>
+        <p class="edu-inst">The University of Adelaide</p>
+        <p class="edu-meta">Adelaide, Australia · 2010</p>
       </div>
     </div>
   </section>
