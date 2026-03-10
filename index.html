@@ -58,7 +58,17 @@
       width: 160px; height: 160px; overflow: hidden;
       border-radius: 50%; border: 3px solid var(--rule); flex-shrink: 0;
     }
-    .avatar-wrap img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+    .avatar-wrap img { width: 100%; height: 100%; object-fit: cover; object-position: center 15%; }
+
+    .icon-links { display: flex; gap: 0.5rem; align-items: center; }
+    .icon-btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 36px; height: 36px; border: 1px solid var(--rule);
+      border-radius: 2px; color: var(--muted); text-decoration: none;
+      transition: all 0.2s; background: var(--bg); flex-shrink: 0;
+    }
+    .icon-btn:hover { border-color: var(--accent); color: var(--accent); }
+    .icon-btn svg { width: 18px; height: 18px; }
 
    /* EDUCATION TIMELINE */
     .edu-timeline-inner { position: relative; padding-left: 1.4rem; }
@@ -120,6 +130,13 @@
     .tag.disc { background: #f0f0f0; color: #999; }
     .tag.book { background: #f0eaf7; color: #5a2d8e; }
 
+    .year-group-heading {
+      font-family: var(--serif); font-size: 1.3rem; font-weight: 400;
+      color: var(--ink); padding: 1.5rem 0 0.8rem;
+      border-bottom: 2px solid var(--accent); margin-bottom: 0;
+    }
+    .year-group-heading:first-child { padding-top: 0; }
+
     /* TEACHING */
     .teaching-list { display: flex; flex-direction: column; gap: 1rem; }
     .course-item { display: grid; grid-template-columns: 1fr auto; align-items: center; padding: 1.1rem 1.4rem; border: 1px solid var(--rule); border-radius: 2px; transition: border-color 0.2s; }
@@ -170,11 +187,22 @@
       <p class="hero-eyebrow">Senior Lecturer · Singapore University of Social Sciences</p>
       <h1>Edward Yapp Kien Yee</h1>
       <p class="hero-title">Business Analytics · Quantitative Trading · Art Market Analysis</p>
-      <p class="hero-bio">Edward Yapp Kien Yee is Senior Lecturer in the School of Business at the Singapore University of Social Sciences. His research interests span business analytics, quantitative trading and the analysis of art and cultural heritage markets. His current research topics include machine learning methods for financial fraud detection, continual and cross-domain learning and the data-driven classification of Chinese ceramics. He is the author and coauthor of recent papers in scholarly journals, including "An extensive experimental comparison of machine and deep learning methods for credit and bank fraud detection" in <em>Finance Research Letters</em>, "Cross-domain continual learning via CLAMP" in <em>Information Sciences</em> and "Autonomous cross domain adaptation under extreme label scarcity" in <em>IEEE Transactions on Neural Networks and Learning Systems</em>. He is a member of the Singapore Finance Association.</p>
+      <p class="hero-bio">Edward Yapp Kien Yee is Senior Lecturer in the School of Business at the Singapore University of Social Sciences. His research interests span business analytics, quantitative trading, and the analysis of art and cultural heritage markets. His current research topics include machine learning methods for financial fraud detection, continual and cross-domain learning, and the data-driven classification of Chinese ceramics. He is the author and coauthor of recent papers in scholarly journals, including "An extensive experimental comparison of machine and deep learning methods for credit and bank fraud detection" in <em>Finance Research Letters</em>, "Cross-domain continual learning via CLAMP" in <em>Information Sciences</em> and "Autonomous cross domain adaptation under extreme label scarcity" in <em>IEEE Transactions on Neural Networks and Learning Systems</em>. He is a member of the Singapore Finance Association.</p>
       <div class="hero-links">
         <a href="#publications" class="btn btn-primary">View Publications</a>
         <!-- <a href="/cdn-cgi/l/email-protection#89ecedfee8fbedf0e8f9f9e2f0c9fafcfafaa7ecedfca7faee" class="btn btn-outline">Get in Touch</a> -->
         <a href="mailto:edwardyappky@suss.edu.sg" class="btn btn-outline">Get in Touch</a>
+        <div class="icon-links">
+          <a href="https://scholar.google.com/citations?user=9wi2nt4AAAAJ&hl=en" target="_blank" class="icon-btn" title="Google Scholar">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5h3.6v7.4C2.7 17.7 2 18.9 2 20.3c0 2 1.6 3.7 3.5 3.7s3.5-1.7 3.5-3.7c0-1.4-.7-2.6-1.6-3.4V9.5H12l9.4-7.6L12 0z"/></svg>
+          </a>
+          <a href="https://orcid.org/0000-0002-2315-3152" target="_blank" class="icon-btn" title="ORCID">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zM7.369 4.378c.525 0 .947.431.947.947s-.422.947-.947.947a.95.95 0 0 1-.947-.947c0-.525.422-.947.947-.947zm-.722 3.038h1.444v10.041H6.647V7.416zm3.562 0h3.9c3.712 0 5.344 2.653 5.344 5.025 0 2.578-2.016 5.025-5.325 5.025h-3.919V7.416zm1.444 1.303v7.444h2.297c2.359 0 3.9-1.585 3.9-3.722 0-2.016-1.447-3.722-3.9-3.722h-2.297z"/></svg>
+          </a>
+          <a href="https://sg.linkedin.com/in/edward-yapp-327b454a" target="_blank" class="icon-btn" title="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+        </div>
       </div>
     </div>
   </section>
@@ -215,6 +243,7 @@
       <button class="pub-tab active" onclick="switchTab(this,'journals')">Journal Articles <span class="pub-count">28</span></button>
       <button class="pub-tab" onclick="switchTab(this,'conferences')">Conference Papers <span class="pub-count">10</span></button>
       <button class="pub-tab" onclick="switchTab(this,'books')">Book Chapters <span class="pub-count">1</span></button>
+      <button class="pub-tab" onclick="switchTab(this,'byyear')">By Year <span class="pub-count">39</span></button>
     </div>
 
     <!-- JOURNALS -->
@@ -611,6 +640,384 @@
 
     </div>
 
+    <!-- BY YEAR -->
+    <div id="tab-byyear" class="pub-panel">
+
+      <p class="year-group-heading">2026</p>
+      <div class="pub-item">
+        <span class="pub-num">[J28]</span>
+        <div>
+          <p class="pub-title"><a href="https://doi.org/10.1017/S0031182026101784" target="_blank">Night soil fertiliser use and parasitic infections in ancient China: a preliminary study of agricultural practices, economic factors and disease ecology in the Song Dynasty</a></p>
+          <p class="pub-authors">C. Chen, A. Y. X. Lee, E. K. Y. Yapp, H.-Y. Yeh</p>
+          <p class="pub-meta"><span>Parasitology, 1–36, 2026 (in press)</span></p>
+          <div class="pub-tags"><span class="tag q1">Q1</span><span class="tag cs">CiteScore 4.8</span><span class="tag" style="background:#e8f0f8;color:var(--accent);">Journal</span></div>
+        </div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-num">[J27]</span>
+        <div>
+          <p class="pub-title"><a href="https://doi.org/10.1016/j.frl.2025.109190" target="_blank">An extensive experimental comparison of machine and deep learning methods for credit and bank fraud detection</a></p>
+          <p class="pub-authors">E. K. Y. Yapp, H.-Y. Yeh</p>
+          <p class="pub-meta"><span>Finance Research Letters, 88:109190, 2026</span></p>
+          <div class="pub-tags"><span class="tag q1">Q1</span><span class="tag cs">CiteScore 10.7</span><span class="tag" style="background:#e8f0f8;color:var(--accent);">Journal</span></div>
+        </div>
+      </div>
+
+      <p class="year-group-heading">2024</p>
+      <div class="pub-item">
+        <span class="pub-num">[J26]</span>
+        <div>
+          <p class="pub-title"><a href="https://doi.org/10.1016/j.ins.2024.120813" target="_blank">Cross-domain continual learning via CLAMP</a></p>
+          <p class="pub-authors">W. Weng, M. Pratama, J. Zhang, C. Chen, E. K. Y. Yapp, R. Savitha</p>
+          <p class="pub-meta"><span>Information Sciences, 676:120813, 2024</span></p>
+          <div class="pub-tags"><span class="tag q1">Q1</span><span class="tag cs">CiteScore 14.4</span><span class="tag" style="background:#e8f0f8;color:var(--accent);">Journal</span></div>
+        </div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-num">[C10]</span>
+        <div>
+          <p class="pub-title"><a href="https://doi.org/10.1016/j.procir.2024.10.320" target="_blank">Anomaly detection on MVTec AD using VQ-VAE-2</a></p>
+          <p class="pub-authors">E. K. Y. Yapp, N. C. N. Nam</p>
+          <p class="pub-meta"><span>57th CIRP Conference on Manufacturing Systems (CMS), 1809–1814, 2024</span></p>
+          <div class="pub-tags"><span class="tag" style="background:#f0eaf7;color:#5a2d8e;">Conference</span></div>
+        </div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-num">[C9]</span>
+        <div>
+          <p class="pub-title"><a href="https://doi.org/10.1109/ICDE60146.2024.00092" target="_blank">Towards cross-domain continual learning</a></p>
+          <p class="pub-authors">M. de Carvalho, M. Pratama, J. Zhang, H. Chua, E. K. Y. Yapp</p>
+          <p class="pub-meta"><span>IEEE 40th International Conference on Data Engineering (ICDE), 1131–1142, 2024</span></p>
+          <div class="pub-tags"><span class="tag" style="background:#f0eaf7;color:#5a2d8e;">Conference</span></div>
+        </div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-num">[C8]</span>
+        <div>
+          <p class="pub-title"><a href="https://doi.org/10.1109/IAI63275.2024.10729912" target="_blank">A review of similarity-based few-shot learning methods for time series classification in manufacturing</a></p>
+          <p class="pub-authors">S. Pan, H. Luo, M. C. H. Chua, K. Pugalenthi, E. K. Y. Yapp</p>
+          <p class="pub-meta"><span>6th International Conference on Industrial Artificial Intelligence (IAI), 1–6, 2024</span></p>
+          <div class="pub-tags"><span class="tag" style="background:#f0eaf7;color:#5a2d8e;">Conference</span></div>
+        </div>
+      </div>
+
+      <p class="year-group-heading">2023</p>
+      <div class="pub-item">
+        <span class="pub-num">[J25]</span>
+        <div>
+          <p class="pub-title"><a href="https://doi.org/10.1007/s10845-022-01995-0" target="_blank">A layer-wise neural network for multi-item single-output quality estimation</a></p>
+          <p class="pub-authors">E. K. Y. Yapp, A. Gupta, X. Li</p>
+          <p class="pub-meta"><span>Journal of Intelligent Manufacturing, 34:3131–3141, 2023</span></p>
+          <div class="pub-tags"><span class="tag q1">Q1</span><span class="tag cs">CiteScore 16.5</span><span class="tag" style="background:#e8f0f8;color:var(--accent);">Journal</span></div>
+        </div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-num">[J24]</span>
+        <div>
+          <p class="pub-title"><a href="https://doi.org/10.1109/TNNLS.2022.3183356" target="_blank">Autonomous cross domain adaptation under extreme label scarcity</a></p>
+          <p class="pub-authors">W. Weng, M. Pratama, C. Za'in, M. de Carvalho, R. Appan, A. Ashfahani, E. K. Y. Yapp</p>
+          <p class="pub-meta"><span>IEEE Transactions on Neural Networks and Learning Systems, 34:6839-6850, 2023</span></p>
+          <div class="pub-tags"><span class="tag q1">Q1</span><span class="tag cs">CiteScore 24.7</span><span class="tag" style="background:#e8f0f8;color:var(--accent);">Journal</span></div>
+        </div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-num">[C7]</span>
+        <div>
+          <p class="pub-title"><a href="https://doi.org/10.2139/ssrn.4470006" target="_blank">Correlation analysis and predictive modeling for quality prediction in injection moulding process of learning factory</a></p>
+          <p class="pub-authors">H. Ge, J. Zhuang, M. T. T. Nguyen, J. Fong, E. K. Y. Yapp, X. Li, N. Doan</p>
+          <p class="pub-meta"><span>13th Conference on Learning Factories (CLF 2023), 1–6, 2023</span></p>
+          <div class="pub-tags"><span class="tag" style="background:#f0eaf7;color:#5a2d8e;">Conference</span></div>
+        </div>
+      </div>
+
+      <p class="year-group-heading">2022</p>
+      <div class="pub-item">
+        <span class="pub-num">[J23]</span>
+        <div>
+          <p class="pub-title"><a href="https://doi.org/10.1016/j.knosys.2022.109486" target="_blank">ACDC: online unsupervised cross-domain adaptation</a></p>
+          <p class="pub-authors">M. de Carvalho, M. Pratama, J. Zhang, E. K. Y. Yapp</p>
+          <p class="pub-meta"><span>Knowledge-Based Systems, 253:109486, 2022</span></p>
+          <div class="pub-tags"><span class="tag q1">Q1</span><span class="tag cs">CiteScore 15.0</span><span class="tag" style="background:#e8f0f8;color:var(--accent);">Journal</span></div>
+        </div>
+      </div>
+
+      <p class="year-group-heading">2021</p>
+      <div class="pub-item">
+        <span class="pub-num">[J22]</span>
+        <div>
+          <p class="pub-title"><a href="https://doi.org/10.1016/j.knosys.2021.106947" target="_blank">Continual learning via inter-task synaptic mapping</a></p>
+          <p class="pub-authors">F. Mao, W. Weng, M. Pratama, E. K. Y. Yapp</p>
+          <p class="pub-meta"><span>Knowledge-Based Systems, 222:106947, 2021</span></p>
+          <div class="pub-tags"><span class="tag q1">Q1</span><span class="tag cs">CiteScore 15.0</span><span class="tag" style="background:#e8f0f8;color:var(--accent);">Journal</span></div>
+        </div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-num">[J21]</span>
+        <div>
+          <p class="pub-title"><a href="https://doi.org/10.1155/2021/3005276" target="_blank">Online semisupervised learning approach for quality monitoring of complex manufacturing process</a></p>
+          <p class="pub-authors">W. Weng, M. Pratama, A. Ashfahani, E. K. Y. Yapp</p>
+          <p class="pub-meta"><span>Complexity, 2021:1–16, 2021</span></p>
+          <div class="pub-tags"><span class="tag q1">Q1</span><span class="tag cs">CiteScore 7.0</span><span class="tag" style="background:#e8f0f8;color:var(--accent);">Journal</span></div>
+        </div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-num">[C6]</span>
+        <div>
+          <p class="pub-title"><a href="https://doi.org/10.1109/IJCNN52387.2021.9534461" target="_blank">Autonomous deep quality monitoring in streaming environments</a></p>
+          <p class="pub-authors">A. Ashfahani, M. Pratama, E. Lughofer, E. K. Y. Yapp</p>
+          <p class="pub-meta"><span>International Joint Conference on Neural Networks (IJCNN), 1–8, 2021</span></p>
+          <div class="pub-tags"><span class="tag" style="background:#f0eaf7;color:#5a2d8e;">Conference</span></div>
+        </div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-num">[C5]</span>
+        <div>
+          <p class="pub-title"><a href="https://doi.org/10.1109/IECON48115.2021.9589593" target="_blank">Quality monitoring for injection moulding process using a semi-supervised learning approach</a></p>
+          <p class="pub-authors">D. N. C. Nam, T. Van Tung, E. K. Y. Yapp</p>
+          <p class="pub-meta"><span>IECON 2021 – 47th Annual Conference of the IEEE Industrial Electronics Society, 1–6, 2021</span></p>
+          <div class="pub-tags"><span class="tag" style="background:#f0eaf7;color:#5a2d8e;">Conference</span></div>
+        </div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-num">[C4]</span>
+        <div>
+          <p class="pub-title"><a href="https://doi.org/10.1109/IECON48115.2021.9589245" target="_blank">Data-driven quality estimation for production processes with lot-level quality control</a></p>
+          <p class="pub-authors">N. J. Punnoose, P. Vadakkepat, A.-P. Loh, E. K. Y. Yapp</p>
+          <p class="pub-meta"><span>IECON 2021 – 47th Annual Conference of the IEEE Industrial Electronics Society, 1–6, 2021</span></p>
+          <div class="pub-tags"><span class="tag" style="background:#f0eaf7;color:#5a2d8e;">Conference</span></div>
+        </div>
+      </div>
+
+      <p class="year-group-heading">2020</p>
+      <div class="pub-item">
+        <span class="pub-num">[J20]</span>
+        <div>
+          <p class="pub-title"><a href="https://doi.org/10.1016/j.neucom.2020.01.102" target="_blank">Comparison of base classifiers for multi-label learning</a></p>
+          <p class="pub-authors">E. K. Y. Yapp, X. Li, W. F. Lu, P. S. Tan</p>
+          <p class="pub-meta"><span>Neurocomputing, 394:51–60, 2020</span></p>
+          <div class="pub-tags"><span class="tag q1">Q1</span><span class="tag cs">CiteScore 13.6</span><span class="tag" style="background:#e8f0f8;color:var(--accent);">Journal</span></div>
+        </div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-num">[J19]</span>
+        <div>
+          <p class="pub-title"><a href="https://doi.org/10.3390/jpm10030128" target="_blank">XGBoost improves classification of MGMT promoter methylation status in IDH1 wildtype glioblastoma</a></p>
+          <p class="pub-authors">N. Q. K. Le, D. T. Do, F.-Y. Chiu, E. K. Y. Yapp, H.-Y. Yeh, C.-Y. Chen</p>
+          <p class="pub-meta"><span>Journal of Personalized Medicine, 10:128, 2020</span></p>
+          <div class="pub-tags"><span class="tag q2">Q2</span><span class="tag cs">CiteScore 4.1</span><span class="tag" style="background:#e8f0f8;color:var(--accent);">Journal</span></div>
+        </div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-num">[J18]</span>
+        <div>
+          <p class="pub-title"><a href="https://doi.org/10.1016/j.neucom.2019.09.070" target="_blank">DeepETC: a deep convolutional neural network architecture for investigating and classifying electron transport chain's complexes</a></p>
+          <p class="pub-authors">N. Q. K. Le, Q.-T. Ho, E. K. Y. Yapp, H.-Y. Yeh, Y.-Y. Ou</p>
+          <p class="pub-meta"><span>Neurocomputing, 375:71–79, 2020</span></p>
+          <div class="pub-tags"><span class="tag q1">Q1</span><span class="tag cs">CiteScore 13.6</span><span class="tag" style="background:#e8f0f8;color:var(--accent);">Journal</span></div>
+        </div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-num">[J17]</span>
+        <div>
+          <p class="pub-title"><a href="https://doi.org/10.1016/j.chemolab.2020.104171" target="_blank">Incorporating convolutional neural networks and sequence graph transform for identifying multilabel protein Lysine</a></p>
+          <p class="pub-authors">J. N. Sua, S. Y. Lim, M. H. Yulius, X. Su, E. K. Y. Yapp, N. Q. K. Le, H.-Y. Yeh</p>
+          <p class="pub-meta"><span>Chemometrics and Intelligent Laboratory Systems, 206:104171, 2020</span></p>
+          <div class="pub-tags"><span class="tag q2">Q2</span><span class="tag cs">CiteScore 7.4</span><span class="tag" style="background:#e8f0f8;color:var(--accent);">Journal</span></div>
+        </div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-num">[C3]</span>
+        <div>
+          <p class="pub-title"><a href="https://doi.org/10.1109/ICIEA48937.2020.9248430" target="_blank">Unsupervised probability matching for quality estimation with partial information in a many-to-one input-output scenario</a></p>
+          <p class="pub-authors">K. J. Lee, E. K. Y. Yapp, X. Li</p>
+          <p class="pub-meta"><span>15th IEEE Conference on Industrial Electronics and Applications (ICIEA), 1432–1437, 2020</span></p>
+          <div class="pub-tags"><span class="tag" style="background:#f0eaf7;color:#5a2d8e;">Conference</span></div>
+        </div>
+      </div>
+
+      <p class="year-group-heading">2019</p>
+      <div class="pub-item">
+        <span class="pub-num">[J16]</span>
+        <div>
+          <p class="pub-title"><a href="https://doi.org/10.3389/fbioe.2019.00305" target="_blank">Classifying promoters by interpreting the hidden information of DNA sequences via deep learning and combination of continuous FastText N-grams</a></p>
+          <p class="pub-authors">N. Q. K. Le, E. K. Y. Yapp, N. Nagasundaram, H.-Y. Yeh</p>
+          <p class="pub-meta"><span>Frontiers in Bioengineering and Biotechnology, 7:305, 2019</span></p>
+          <div class="pub-tags"><span class="tag q1">Q1</span><span class="tag cs">CiteScore 8.8</span><span class="tag" style="background:#e8f0f8;color:var(--accent);">Journal</span></div>
+        </div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-num">[J15]</span>
+        <div>
+          <p class="pub-title"><a href="https://doi.org/10.1016/j.csbj.2019.09.005" target="_blank">Computational identification of vesicular transport proteins from sequences using deep gated recurrent units architecture</a></p>
+          <p class="pub-authors">N. Q. K. Le, E. K. Y. Yapp, N. Nagasundaram, M. C. H. Chua, H.-Y. Yeh</p>
+          <p class="pub-meta"><span>Computational and Structural Biotechnology Journal, 17:1245–1254, 2019</span></p>
+          <div class="pub-tags"><span class="tag q1">Q1</span><span class="tag cs">CiteScore 9.8</span><span class="tag" style="background:#e8f0f8;color:var(--accent);">Journal</span></div>
+        </div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-num">[J14]</span>
+        <div>
+          <p class="pub-title"><a href="https://doi.org/10.1016/j.cmpb.2019.05.016" target="_blank">Identification of clathrin proteins by incorporating hyperparameter optimization in deep learning and PSSM profiles</a></p>
+          <p class="pub-authors">N. Q. K. Le, T.-T. Huynh, E. K. Y. Yapp, H.-Y. Yeh</p>
+          <p class="pub-meta"><span>Computer Methods and Programs in Biomedicine, 177:81–88, 2019</span></p>
+          <div class="pub-tags"><span class="tag q1">Q1</span><span class="tag cs">CiteScore 11.1</span><span class="tag" style="background:#e8f0f8;color:var(--accent);">Journal</span></div>
+        </div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-num">[J13]</span>
+        <div>
+          <p class="pub-title"><a href="https://doi.org/10.1016/j.ab.2019.02.017" target="_blank">iEnhancer-5Step: Identifying enhancers using hidden information of DNA sequences via Chou's 5-step rule and word embedding</a></p>
+          <p class="pub-authors">N. Q. K. Le, E. K. Y. Yapp, Q.-T. Ho, N. Nagasundaram, Y.-Y. Ou, H.-Y. Yeh</p>
+          <p class="pub-meta"><span>Analytical Biochemistry, 571:53–61, 2019</span></p>
+          <div class="pub-tags"><span class="tag q3">Q3</span><span class="tag cs">CiteScore 11.1</span><span class="tag" style="background:#e8f0f8;color:var(--accent);">Journal</span></div>
+        </div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-num">[J12]</span>
+        <div>
+          <p class="pub-title"><a href="https://doi.org/10.1016/j.ab.2019.03.017" target="_blank">iMotor-CNN: Identifying molecular functions of cytoskeleton motor proteins using 2D convolutional neural network via Chou's 5-step rule</a></p>
+          <p class="pub-authors">N. Q. K. Le, E. K. Y. Yapp, Y.-Y. Ou, H.-Y. Yeh</p>
+          <p class="pub-meta"><span>Analytical Biochemistry, 575:17–26, 2019</span></p>
+          <div class="pub-tags"><span class="tag q3">Q3</span><span class="tag cs">CiteScore 11.1</span><span class="tag" style="background:#e8f0f8;color:var(--accent);">Journal</span></div>
+        </div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-num">[J11]</span>
+        <div>
+          <p class="pub-title"><a href="https://doi.org/10.1186/s12859-019-2972-5" target="_blank">ET-GRU: Incorporating multi-layer gated recurrent units and position specific scoring matrices to identify electron transport proteins</a></p>
+          <p class="pub-authors">N. Q. K. Le, E. K. Y. Yapp, H.-Y. Yeh</p>
+          <p class="pub-meta"><span>BMC Bioinformatics, 20:377, 2019</span></p>
+          <div class="pub-tags"><span class="tag q1">Q1</span><span class="tag cs">CiteScore 6.8</span><span class="tag" style="background:#e8f0f8;color:var(--accent);">Journal</span></div>
+        </div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-num">[J10]</span>
+        <div>
+          <p class="pub-title"><a href="https://doi.org/10.1016/j.jcp.2019.06.074" target="_blank">A detailed particle model for polydisperse titanium dioxide aggregates</a></p>
+          <p class="pub-authors">C. S. Lindberg, M. Y. Manuputty, E. K. Yapp, J. Akroyd, R. Xu, M. Kraft</p>
+          <p class="pub-meta"><span>Journal of Computational Physics, 397:108799, 2019</span></p>
+          <div class="pub-tags"><span class="tag q1">Q1</span><span class="tag cs">CiteScore 7.9</span><span class="tag" style="background:#e8f0f8;color:var(--accent);">Journal</span></div>
+        </div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-num">[J9]</span>
+        <div>
+          <p class="pub-title"><a href="https://doi.org/10.1155/2019/8427042" target="_blank">Application of computational biology and artificial intelligence technologies in cancer precision drug discovery</a></p>
+          <p class="pub-authors">N. Nagasundaram, E. K. Y. Yapp, N. Q. K. Le, B. Kamaraj, A. M. Al-Subaie, H.-Y. Yeh</p>
+          <p class="pub-meta"><span>BioMed Research International, 2019</span></p>
+          <div class="pub-tags"><span class="tag q2">Q2</span><span class="tag cs">CiteScore 7.9</span><span class="tag" style="background:#e8f0f8;color:var(--accent);">Journal</span></div>
+        </div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-num">[J8]</span>
+        <div>
+          <p class="pub-title"><a href="https://doi.org/10.1007/s11033-019-04792-w" target="_blank">In silico screening of sorbitol derivatives to inhibit viral matrix protein VP40 of Ebola virus</a></p>
+          <p class="pub-authors">N. Nagasundaram, E. K. Y. Yapp, N. Q. K. Le, H.-Y. Yeh</p>
+          <p class="pub-meta"><span>Molecular Biology Reports, 46:3315–3324, 2019</span></p>
+          <div class="pub-tags"><span class="tag q2">Q2</span><span class="tag cs">CiteScore 5.0</span><span class="tag" style="background:#e8f0f8;color:var(--accent);">Journal</span></div>
+        </div>
+      </div>
+
+      <p class="year-group-heading">2017</p>
+      <div class="pub-item">
+        <span class="pub-num">[J7]</span>
+        <div>
+          <p class="pub-title"><a href="https://doi.org/10.1021/acs.jpcc.7b09044" target="_blank">The polarization of polycyclic aromatic hydrocarbons curved by pentagon incorporation: the role of the flexoelectric dipole</a></p>
+          <p class="pub-authors">J. W. Martin, R. I. Slavchov, E. K. Y. Yapp, J. Akroyd, S. Mosbach, M. Kraft</p>
+          <p class="pub-meta"><span>Journal of Physical Chemistry C, 121:27154–27163, 2017</span></p>
+          <div class="pub-tags"><span class="tag q1">Q1</span><span class="tag cs">CiteScore 6.2</span><span class="tag" style="background:#e8f0f8;color:var(--accent);">Journal</span></div>
+        </div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-num">[J6]</span>
+        <div>
+          <p class="pub-title"><a href="https://doi.org/10.1016/j.egypro.2017.12.330" target="_blank">Modelling of soot formation in a diesel engine with the moment projection method</a></p>
+          <p class="pub-authors">S. Wu, E. K. Y. Yapp, J. Akroyd, S. Mosbach, R. Xu, W. Yang, M. Kraft</p>
+          <p class="pub-meta"><span>Energy Procedia, 142:4092–4097, 2017</span></p>
+          <div class="pub-tags"><span class="tag disc">Discontinued journal</span><span class="tag" style="background:#e8f0f8;color:var(--accent);">Journal</span></div>
+        </div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-num">[J5]</span>
+        <div>
+          <p class="pub-title"><a href="https://doi.org/10.1016/j.jcp.2017.01.045" target="_blank">Extension of moment projection method to the fragmentation process</a></p>
+          <p class="pub-authors">S. Wu, E. K. Y. Yapp, J. Akroyd, S. Mosbach, R. Xu, W. Yang, M. Kraft</p>
+          <p class="pub-meta"><span>Journal of Computational Physics, 335:516–534, 2017</span></p>
+          <div class="pub-tags"><span class="tag q1">Q1</span><span class="tag cs">CiteScore 7.9</span><span class="tag" style="background:#e8f0f8;color:var(--accent);">Journal</span></div>
+        </div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-num">[J4]</span>
+        <div>
+          <p class="pub-title"><a href="https://doi.org/10.1016/j.jcp.2016.10.030" target="_blank">A moment projection method for population balance dynamics with a shrinkage term</a></p>
+          <p class="pub-authors">S. Wu, E. K. Y. Yapp, J. Akroyd, S. Mosbach, R. Xu, W. Yang, M. Kraft</p>
+          <p class="pub-meta"><span>Journal of Computational Physics, 330:960–980, 2017</span></p>
+          <div class="pub-tags"><span class="tag q1">Q1</span><span class="tag cs">CiteScore 7.9</span><span class="tag" style="background:#e8f0f8;color:var(--accent);">Journal</span></div>
+        </div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-num">[J3]</span>
+        <div>
+          <p class="pub-title"><a href="https://doi.org/10.1016/j.combustflame.2016.10.004" target="_blank">Modelling PAH curvature in laminar premixed flames using a detailed population balance model</a></p>
+          <p class="pub-authors">E. K. Y. Yapp, C. G. Wells, J. Akroyd, S. Mosbach, M. Kraft</p>
+          <p class="pub-meta"><span>Combustion and Flame, 34:1861–1868, 2017</span></p>
+          <div class="pub-tags"><span class="tag q1">Q1</span><span class="tag cs">CiteScore 10.9</span><span class="tag" style="background:#e8f0f8;color:var(--accent);">Journal</span></div>
+        </div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-num">[C2]</span>
+        <div>
+          <p class="pub-title"><a href="https://doi.org/10.1016/j.proci.2016.06.170" target="_blank">Soot particle size distributions in premixed stretch-stabilized flat ethylene–oxygen–argon flames</a></p>
+          <p class="pub-authors">J. Camacho, A. V. Singh, W. Wang, R. Shan, E. K. Y. Yapp, D. Chen, M. Kraft, H. Wang</p>
+          <p class="pub-meta"><span>Proceedings of the Combustion Institute, 36:1001–1009, 2017</span></p>
+          <div class="pub-tags"><span class="tag" style="background:#f0eaf7;color:#5a2d8e;">Conference</span></div>
+        </div>
+      </div>
+
+      <p class="year-group-heading">2016</p>
+      <div class="pub-item">
+        <span class="pub-num">[J2]</span>
+        <div>
+          <p class="pub-title"><a href="https://doi.org/10.1016/j.combustflame.2016.01.033" target="_blank">Numerical simulation and parametric sensitivity study of optical band gap in a laminar co-flow ethylene diffusion flame</a></p>
+          <p class="pub-authors">E. K. Y. Yapp, R. I. A. Patterson, J. Akroyd, S. Mosbach, E. M. Adkins, J. H. Miller, M. Kraft</p>
+          <p class="pub-meta"><span>Combustion and Flame, 167:2569–2581, 2016</span></p>
+          <div class="pub-tags"><span class="tag q1">Q1</span><span class="tag cs">CiteScore 10.9</span><span class="tag" style="background:#e8f0f8;color:var(--accent);">Journal</span></div>
+        </div>
+      </div>
+
+      <p class="year-group-heading">2015</p>
+      <div class="pub-item">
+        <span class="pub-num">[J1]</span>
+        <div>
+          <p class="pub-title"><a href="https://doi.org/10.1016/j.combustflame.2015.03.006" target="_blank">Numerical simulation and parametric sensitivity study of particle size distributions in a burner-stabilised stagnation flame</a></p>
+          <p class="pub-authors">E. K. Y. Yapp, D. Chen, J. Akroyd, S. Mosbach, M. Kraft, J. Camacho, H. Wang</p>
+          <p class="pub-meta"><span>Combustion and Flame, 162:2569–2581, 2015</span></p>
+          <div class="pub-tags"><span class="tag q1">Q1</span><span class="tag cs">CiteScore 10.9</span><span class="tag" style="background:#e8f0f8;color:var(--accent);">Journal</span></div>
+        </div>
+      </div>
+
+      <p class="year-group-heading">2013</p>
+      <div class="pub-item">
+        <span class="pub-num">[C1]</span>
+        <div>
+          <p class="pub-title"><a href="https://doi.org/10.1016/j.proci.2012.06.089" target="_blank">A fully coupled simulation of PAH and soot growth with a population balance model</a></p>
+          <p class="pub-authors">D. Chen, Z. Zainuddin, E. K. Y. Yapp, J. Akroyd, S. Mosbach, M. Kraft</p>
+          <p class="pub-meta"><span>Proceedings of the Combustion Institute, 34:1827–1835, 2013</span></p>
+          <div class="pub-tags"><span class="tag" style="background:#f0eaf7;color:#5a2d8e;">Conference</span></div>
+        </div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-num">[B1]</span>
+        <div>
+          <p class="pub-title"><a href="https://doi.org/10.1007/978-1-4471-5307-8_15" target="_blank">Modelling soot formation: model of particle formation</a></p>
+          <p class="pub-authors">E. K. Y. Yapp, M. Kraft</p>
+          <p class="pub-meta"><span>In F. Battin-Leclerc, J. M. Simmie, E. Blurock (Eds.), Cleaner Combustion. Springer, London, 2013</span></p>
+          <div class="pub-tags"><span class="tag book">Book Chapter</span></div>
+        </div>
+      </div>
+
+    </div>
+
   </section>
 
   <!-- TEACHING -->
@@ -659,6 +1066,13 @@
 <footer>
   <p>&copy; 2026 Edward Yapp Kien Yee &middot; Singapore University of Social Sciences &middot;
     <a href="mailto:edwardyappky@suss.edu.sg">edwardyappky@suss.edu.sg</a>
+  </p>
+  <p style="margin-top:0.5rem;">
+    <a href="https://scholar.google.com/citations?user=9wi2nt4AAAAJ&hl=en" target="_blank">Google Scholar</a>
+    <span style="margin:0 0.4rem;color:var(--rule);">·</span>
+    <a href="https://orcid.org/0000-0002-2315-3152" target="_blank">ORCID</a>
+    <span style="margin:0 0.4rem;color:var(--rule);">·</span>
+    <a href="https://sg.linkedin.com/in/edward-yapp-327b454a" target="_blank">LinkedIn</a>
   </p>
 </footer>
 
