@@ -138,12 +138,26 @@
     .year-group-heading:first-child { padding-top: 0; }
 
     /* TEACHING */
-    .teaching-list { display: flex; flex-direction: column; gap: 1rem; }
-    .course-item { display: grid; grid-template-columns: 1fr auto; align-items: center; padding: 1.1rem 1.4rem; border: 1px solid var(--rule); border-radius: 2px; transition: border-color 0.2s; }
-    .course-item:hover { border-color: #aab8cc; }
-    .course-code { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.08em; color: var(--accent); margin-bottom: 0.2rem; }
-    .course-name { font-family: var(--serif); font-size: 1rem; }
-    .course-level { font-size: 0.75rem; color: var(--muted); background: var(--tag-bg); padding: 0.2rem 0.6rem; border-radius: 2px; }
+    .teach-sub-label { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); display: block; margin-bottom: 1rem; }
+    .teach-table { width: 100%; border-collapse: collapse; }
+    .teach-table th { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); text-align: left; padding: 0 0.8rem 0.8rem 0; border-bottom: 1px solid var(--rule); }
+    .teach-table td { font-size: 0.88rem; padding: 0.85rem 0.8rem 0.85rem 0; border-bottom: 1px solid var(--rule); vertical-align: middle; }
+    .teach-table tr:last-child td { border-bottom: none; }
+    .teach-code { font-size: 0.75rem !important; font-weight: 600; color: var(--accent); letter-spacing: 0.05em; white-space: nowrap; }
+    .teach-name { font-family: var(--serif); font-size: 1rem !important; }
+    .sem-tag { font-size: 0.7rem; color: var(--accent); background: var(--tag-bg); padding: 0.15rem 0.5rem; border-radius: 2px; white-space: nowrap; display: inline-block; margin-right: 0.25rem; }
+    .supervision-list { display: flex; flex-direction: column; gap: 1rem; }
+    .supervision-item { padding: 1.1rem 1.4rem; border: 1px solid var(--rule); border-radius: 2px; }
+    .sup-meta { font-size: 0.72rem; font-weight: 600; color: var(--accent); letter-spacing: 0.05em; margin-bottom: 0.3rem; }
+    .sup-course { font-family: var(--serif); font-size: 1rem; margin-bottom: 0.5rem; }
+    .sup-students { font-size: 0.82rem; color: var(--muted); }
+    .sup-students span { display: inline-block; margin-right: 1rem; }
+    .sup-students span::before { content: '— '; }
+
+    .sup-row { padding: 0.9rem 0; border-bottom: 1px solid var(--rule); }
+    .sup-row-main { display: flex; align-items: baseline; gap: 0.8rem; margin-bottom: 0.3rem; }
+    .sup-row-inst { font-size: 0.78rem; color: var(--muted); }
+    .sup-row-students { font-size: 0.82rem; color: var(--muted); padding-left: 0; }
 
     /* CV */
     #cv { text-align: center; padding: 80px 0; }
@@ -1020,30 +1034,71 @@
 
   </section>
 
+  </section>
+
   <!-- TEACHING -->
   <section id="teaching">
-    <span class="section-label">Teaching &amp; Courses</span>
-    <div class="teaching-list fade-in">
-      <div class="course-item">
-        <div>
-          <p class="course-code">COURSE CODE</p>
-          <p class="course-name">Course Name</p>
+    <span class="section-label">Teaching</span>
+    <span class="teach-sub-label">Courses Taught</span>
+    <table class="teach-table fade-in">
+      <thead>
+        <tr>
+          <th>Code</th>
+          <th>Course</th>
+          <th>Level</th>
+          <th>Semester</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="teach-code">ANL201</td>
+          <td class="teach-name">Data Visualisation for Business</td>
+          <td><span class="course-level">Undergraduate</span></td>
+          <td><span class="sem-tag">Jan 25</span></td>
+        </tr>
+        <tr>
+          <td class="teach-code">ANL252</td>
+          <td class="teach-name">Python for Data Analytics</td>
+          <td><span class="course-level">Undergraduate</span></td>
+          <td><span class="sem-tag">Jul 25</span></td>
+        </tr>
+        <tr>
+          <td class="teach-code">ANL317</td>
+          <td class="teach-name">Business Forecasting</td>
+          <td><span class="course-level">Undergraduate</span></td>
+          <td><span class="sem-tag">Jan 25</span> <span class="sem-tag">Jan 26</span></td>
+        </tr>
+        <tr>
+          <td class="teach-code">ANL355</td>
+          <td class="teach-name">Applied Operations Research</td>
+          <td><span class="course-level">Undergraduate</span></td>
+          <td><span class="sem-tag">Jan 26</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+<span class="teach-sub-label" style="margin-top:2.5rem;">Student Supervision</span>
+    <div class="teach-table fade-in">
+      <div class="sup-row">
+        <div class="sup-row-main">
+          <span class="teach-code">ANL488 · Business Analytics Applied Project</span>
+          <span class="sup-row-inst">SUSS</span>
         </div>
-        <span class="course-level">Undergraduate</span>
+        <div class="sup-row-students">Brandon Chew Zi Yang, Kwek Yu Ting, Sherry Lim Choon Yee</div>
       </div>
-      <div class="course-item">
-        <div>
-          <p class="course-code">COURSE CODE</p>
-          <p class="course-name">Course Name</p>
+      <div class="sup-row">
+        <div class="sup-row-main">
+          <span class="teach-code">Masters</span>
+          <span class="sup-row-inst">NUS <span style="font-style:italic;">· while at A*STAR</span></span>
         </div>
-        <span class="course-level">Undergraduate</span>
+        <div class="sup-row-students">Liang Jinning, Lin Zijun, Luo Haiming, Pan Shuyi</div>
       </div>
-      <div class="course-item">
-        <div>
-          <p class="course-code">COURSE CODE</p>
-          <p class="course-name">Course Name</p>
+      <div class="sup-row" style="border-bottom:none;">
+        <div class="sup-row-main">
+          <span class="teach-code">PhD</span>
+          <span class="sup-row-inst">NTU / NUS <span style="font-style:italic;">· while at A*STAR</span></span>
         </div>
-        <span class="course-level">Postgraduate</span>
+        <div class="sup-row-students">Marcus de Carvalho (NTU), Weng Weiwei (NTU), Naveen John Punnoose (NUS)</div>
       </div>
     </div>
   </section>
