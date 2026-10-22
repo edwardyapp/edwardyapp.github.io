@@ -1,0 +1,17 @@
+# CLAUDE.md
+
+Personal academic site for Edward Yapp Kien Yee, served by GitHub Pages. Everything lives in a single static `index.html` (inline CSS and JS, no build step).
+
+## Publications
+
+- Every publication appears twice: once in its own tab (`#tab-journals`, `#tab-conferences` or `#tab-books`) and once in the All tab (`#tab-byyear`, labelled "By Year"), under the right `year-group-heading`. Add, edit or remove both copies together.
+- The All tab copy carries an extra type tag at the end of `pub-tags` (`Journal`, `Conference`, etc.), matching the inline styles on neighbouring entries.
+- Numbering is `[J#]`, `[C#]`, `[B#]`, newest first. Update the counts in the `pub-tab` buttons (`pub-count`) when entries are added or removed; the By Year count is the total.
+- Titles are in sentence case, including lowercase after colons (e.g. "ACDC: online unsupervised cross-domain adaptation"). Proper nouns, acronyms and named methods keep their capitals.
+- Use en dashes (–), not hyphens, in page ranges (`1–9`) and in conference names (`ICCE–TW`).
+- Link titles to the DOI via `https://doi.org/...` with `target="_blank" rel="noopener noreferrer"`.
+- Accepted but unpublished papers end their `pub-meta` with "(accepted)" and have no link: wrap the title in `<span>` instead of `<a>`. Add the DOI link and drop "(accepted)" once published.
+
+## Awards
+
+Each award is a `div.award-item` containing `p.award-title` and `p.award-meta`, newest first. Meta format: `<Conference> <Year> · Presented for the paper “<title>”…` ending with a period. Use curly quotes (“ ”) around paper titles.
